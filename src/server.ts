@@ -11,9 +11,6 @@ dotenv.config({
 
 dbConnect()
     .then(() => {
-        app.get("/", (req: Request, res: Response) => {
-            res.send("Library management system")
-        });
         app.listen(port, () => {
             console.log(`⚙️  Example app listening on port ${port}`)
         })
