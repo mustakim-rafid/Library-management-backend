@@ -8,6 +8,11 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 exports.app = app;
 app.use(express_1.default.json());
+app.get("/", (req, res) => {
+    res.json({
+        message: "Library Management System"
+    });
+});
 const book_route_1 = require("./app/routes/book.route");
 app.use("/api/books", book_route_1.bookRouter);
 const borrow_route_1 = require("./app/routes/borrow.route");

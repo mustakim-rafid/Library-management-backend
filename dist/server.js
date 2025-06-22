@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 const db_1 = require("./app/db");
 const app_1 = require("./app");
-const port = 5000;
+const port = 3000;
 dotenv_1.default.config({
     path: "./.env"
 });
