@@ -5,7 +5,9 @@ const app = express()
 app.use(express.json())
 
 app.get("/", (req: Request, res: Response) => {
-    res.send("<h1>Library Management System</h1>")
+    res.json({
+        message: "Library Management System"
+    })
 });
 
 import { bookRouter } from "./app/routes/book.route"
