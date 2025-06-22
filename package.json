@@ -1,0 +1,23 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "A backend project for library management",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./dist/server.js",
+    "start": "node ./dist/server.js",
+    "build": "tsc"
+  },
+  "author": "Rafid",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3"
+  }
+}
