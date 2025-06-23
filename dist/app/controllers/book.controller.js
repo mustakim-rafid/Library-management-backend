@@ -81,7 +81,9 @@ const updateBookById = (req, res) => __awaiter(void 0, void 0, void 0, function*
     try {
         const id = req.params.bookId;
         const updates = req.body;
-        const updatedBook = yield book_model_1.Book.findByIdAndUpdate(id, {
+        const updatedBook = yield book_model_1.Book.findOneAndUpdate({
+            _id: id,
+        }, {
             $set: updates
         }, {
             new: true,

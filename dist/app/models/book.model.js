@@ -98,4 +98,13 @@ bookSchema.pre("save", function (next) {
     }
     next();
 });
+bookSchema.post("findOneAndUpdate", function (doc) {
+    if (doc.copies === 0) {
+        doc.available = false;
+    }
+    else {
+        doc.available = true;
+    }
+    doc.save();
+});
 exports.Book = mongoose_1.default.model("Book", bookSchema);

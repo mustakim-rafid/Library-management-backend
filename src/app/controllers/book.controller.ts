@@ -82,8 +82,10 @@ const updateBookById = async (req: Request, res: Response) => {
         const id = req.params.bookId
         const updates = req.body
 
-        const updatedBook = await Book.findByIdAndUpdate(
-            id,
+        const updatedBook = await Book.findOneAndUpdate(
+            {
+                _id: id,
+            },
             {
                 $set: updates
             },
