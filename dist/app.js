@@ -10,7 +10,8 @@ const app = (0, express_1.default)();
 exports.app = app;
 app.use((0, cors_1.default)({
     origin: [
-        'http://localhost:5173'
+        'http://localhost:5173',
+        `${process.env.ORIGIN_CORS}`
     ]
 }));
 app.use(express_1.default.json());
